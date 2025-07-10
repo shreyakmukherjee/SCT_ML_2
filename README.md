@@ -55,6 +55,43 @@ Group similar customers together for targeted marketing based on:
 
 ---
 
+## 🧠 Methodology
+
+- **Data Preprocessing & Cleaning** 🧹  
+  Handled missing values and standardized column names.
+
+- **Label Encoding** 🔢  
+  Converted categorical variables like Gender into numerical format.
+
+- **Feature Selection** 🎯  
+  Selected features: `Age`, `Annual Income`, and `Spending Score`.
+
+- **Elbow Method** 🔍  
+  Determined optimal number of clusters (K) using the Elbow Curve.
+
+- **KMeans Clustering** 🔄  
+  Applied `KMeans` with `K=5` to segment customers into meaningful groups.
+
+- **Cluster Labeling & Analysis** 🏷️  
+  Added cluster labels to dataset and visualized patterns.
+
+- **Export Results** 💾  
+  Saved the final clustered data as `clustered_customers.csv`.
+
+
+---
+
+## 🔍 Clustering Evaluation  
+Although KMeans is unsupervised, we evaluate using internal metrics:
+
+| Metric                | Description                                      |
+|-----------------------|--------------------------------------------------|
+| **Inertia**           | ✔️ Printed from Elbow Method                     |
+| **Silhouette Score**  | 👍 Measures how well-clustered the data is       |
+| **Davies-Bouldin Index** | ✔️ Optional for further evaluation             |
+
+---
+
 ## ✅ Results
 
 📋 **Cluster Summary (Means):**
@@ -73,7 +110,53 @@ Group similar customers together for targeted marketing based on:
 
 ## 📸 Visual Outputs
 
+<div align="center">
 
+
+<table>
+  <tr>
+    <td>
+      <strong>📊 Elbow Method for Optimal K</strong><br>
+      <img src="output_images/Elbow Method for Optimal K.png" width="400">
+    </td>
+    <td>
+      <strong>📈 2D Cluster Plot (Annual Income vs Spending Score)</strong><br>
+      <img src="output_images/2D Cluster Plot (Annual Income vs Spending Score).png" width="400">
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <strong>📉 3D Cluster Visualization</strong><br>
+      <img src="output_images/3D Cluster Visualization.png" width="400">
+    </td>
+    <td>
+      <strong>📦 Cluster Distribution (Bar plot)</strong><br>
+      <img src="output_images/Cluster Distribution (Bar plot).png" width="400">
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <strong>🧑‍🤝‍🧑 Gender Distribution across Clusters</strong><br>
+      <img src="output_images/Gender Distribution across Clusters.png" width="400">
+    </td>
+    <td>
+      <strong>📊 Age Distribution per Cluster (Box plot)</strong><br>
+      <img src="output_images/Age Distribution per Cluster (Box plot).png" width="400">
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <strong>🔥 Feature Correlation Heatmap</strong><br>
+      <img src="output_images/Feature Correlation Heatmap.png" width="400">
+    </td>
+    <td>
+      <strong>🔍 Pairwise Relationships (Pairplot)</strong><br>
+      <img src="output_images/Pairwise Relationships (Pairplot).png" width="400">
+    </td>
+  </tr>
+</table>
+
+</div>
 
 ---
 
